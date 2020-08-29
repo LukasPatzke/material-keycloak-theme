@@ -87,7 +87,9 @@ hr {
     margin-top: 15px;
 }
 
-#kc-login {
+#kc-login, 
+#kc-try-again,
+#kc-submit {
     float: right;
 }
 
@@ -159,4 +161,28 @@ hr {
     white-space: pre;
     min-height: 1.2em;
     padding: 0px 2px 1px;
+}
+
+#kc-authenticate i {
+    width: 100%;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-size: 4em;
+    text-align: center;
+}
+
+#kc-error-available-list {
+    margin-bottom: 1em;
+}
+
+#try-another-way {
+    color: var(---mdc-theme-text-hint-on-background);
+}
+
+.material-icons.kcAuthenticatorPasswordClass::after {
+    content: "security";
+}
+
+.material-icons.kcAuthenticatorWebAuthnPasswordlessClass::after {
+    content: "vpn_key";
 }

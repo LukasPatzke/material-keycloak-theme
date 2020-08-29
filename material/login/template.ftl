@@ -1,4 +1,4 @@
-<#macro registrationLayout bodyClass="" displayInfo=false displayMessage=true>
+<#macro registrationLayout bodyClass="" displayInfo=false displayMessage=true showAnotherWayIfPresent=true>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" class="${properties.kcHtmlClass!}">
 
@@ -62,6 +62,20 @@
                             <#nested "form">
                         </div>
                     </div>
+
+                    <#if auth?has_content && auth.showTryAnotherWayLink() && showAnotherWayIfPresent>
+                    <form id="kc-select-try-another-way-form" action="${url.loginAction}" method="post" >
+                        <div>
+                            <div class="${properties.kcFormGroupClass!}">
+                            <input type="hidden" name="tryAnotherWay" value="on" />
+                            <#--  <a href="#" id="try-another-way" onclick="document.forms['kc-select-try-another-way-form'].submit();return false;">${msg("doTryAnotherWay")}</a>  -->
+                            <button class="mdc-button  ${properties.kcButtonClass!} ${properties.kcButtonPrimaryClass!} ${properties.kcButtonLargeClass!}" name="login" type="submit">
+                                ${msg("doTryAnotherWay")}
+                            </button>
+                            </div>
+                        </div>
+                    </form>
+                    </#if>
 
                     <#if displayInfo>
                         <div id="kc-info" class="${properties.kcInfoAreaClass!}">

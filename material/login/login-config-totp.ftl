@@ -21,13 +21,21 @@
     <form action="${url.loginAction}" class="form config-totp ${properties.kcFormClass!}" id="kc-totp-settings-form" method="post">
         <div class="${properties.kcFormGroupClass!} row">
             <div class="${properties.kcInputWrapperClass!} col-xs-12">
-                <input type="text" id="totp" name="totp" autocomplete="off" class="form-control ${properties.kcInputClass!}" />
+                <div class="mdc-text-field mdc-text-field--outlined " >
+                    <input type="text" id="totp" name="totp" autofocus autocomplete="off" class="form-control mdc-text-field__input ${properties.kcInputClass!}" />
+                    <div class="mdc-notched-outline">
+                        <svg>
+                            <path class="mdc-notched-outline__path"/>
+                        </svg>
+                    </div>
+                    <div class="mdc-notched-outline__idle"></div>
+                </div>
             </div>
             <input type="hidden" id="totpSecret" name="totpSecret" value="${totp.totpSecret}" />
         </div>
         <div class="row config-totp-button-container">
             <div class="col-xs-6 col-xs-offset-6 col-sm-4 col-sm-offset-8">
-                <input class="btn btn-primary btn-flat btn-block ${properties.kcButtonClass!} ${properties.kcButtonPrimaryClass!} ${properties.kcButtonLargeClass!}" type="submit" value="${msg("doSubmit")}"/>
+                <input class="mdc-button mdc-button--raised btn btn-primary btn-flat btn-block ${properties.kcButtonClass!} ${properties.kcButtonPrimaryClass!} ${properties.kcButtonLargeClass!}" id="kc-submit" type="submit" value="${msg("doSubmit")}"/>
             </div>
         </div>
     </form>
