@@ -29,10 +29,10 @@
                     <div class="${properties.kcFormOptionsWrapperClass!}">
                         <span>
                             <#--  <a class="btn btn-default btn-flat btn-block" href="${url.loginUrl}"><i class="fa fa-caret-left"></i>&nbsp;&nbsp;${msg("backToLogin")}</a>  -->
-                            <button class="mdc-button" onclick="window.location.href = ${url.loginUrl}" formnovalidate>
-                                <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_back</i>
-                                ${msg("backToLogin")?no_esc}
-                            </button>
+                            <a class="mdc-button" href="${url.loginUrl}">
+                                 <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_back</i>
+                                 ${msg("backToLogin")}
+                            </a>
                         </span>
                     </div>
                 </div>

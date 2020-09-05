@@ -111,7 +111,7 @@
                         <div>
                             <div class="${properties.kcFormOptionsWrapperClass!} col-xs-12">
                                 <#if realm.resetPasswordAllowed>
-                                    <span><a href="${url.loginResetCredentialsUrl}">${msg("doForgotPassword")}</a></span>
+                                    <span><a class="mdc-button" href="${url.loginResetCredentialsUrl}">${msg("doForgotPassword")}</a></span>
                                 </#if>
                             </div>
                         </div>

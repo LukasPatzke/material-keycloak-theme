@@ -127,10 +127,10 @@
                 <div id="kc-form-options" class="${properties.kcFormOptionsClass!}">
                     <div class="${properties.kcFormOptionsWrapperClass!}">
                         <span>
-                            <button class="mdc-button" onclick="window.location.href = ${url.loginUrl}" formnovalidate>
+                            <a class="mdc-button" href="${url.loginUrl}">
                                 <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_back</i>
                                 ${msg("backToLogin")?no_esc}
-                            </button>
+                            </a>
                         </span>
                     </div>
                 </div>

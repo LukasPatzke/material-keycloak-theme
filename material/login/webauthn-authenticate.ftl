@@ -7,7 +7,7 @@
     <#elseif section = "form">
 
     <div id="kc-authenticate">
-        <i class="material-icons">vpn_key</i>
+        <img src="${url.resourcesPath}/img/yubikey-icon.png">
     <div>
 
     <form id="webauth" class="${properties.kcFormClass!}" action="${url.loginAction}" method="post">
