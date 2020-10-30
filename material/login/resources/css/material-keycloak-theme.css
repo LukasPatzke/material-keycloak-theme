@@ -192,3 +192,8 @@ hr {
 .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {
     color: var(--mdc-theme-primary);
     }
+
+.kc-otp-input {
+    padding-left: 60px;
+    letter-spacing: 24px;
+}
